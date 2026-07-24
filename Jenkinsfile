@@ -11,16 +11,16 @@ pipeline {
         }
 
         stage('List Files') {
-            steps {
-                bat 'dir'
-            }
-        }
+    steps {
+        sh 'ls -la'
+    }
+}
 
-        stage('Read HTML') {
-            steps {
-                bat 'type index.html'
-            }
-        }
+stage('Read HTML') {
+    steps {
+        sh 'cat index.html'
+    }
+}
 
     }
 
